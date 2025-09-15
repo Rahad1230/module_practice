@@ -1,0 +1,50 @@
+<!--
+File: mouse.html
+Created: Monday, 15th September 2025 10:45:10 pm
+Author: Md.Rahad (mdrahad1296@gmail.com)
+-----
+Last Modified: Monday, 15th September 2025 11:11:19 pm
+Modified By: Md.Rahad (mdrahad1296@gmail.com)
+-----
+Copyright (c) 2025 Islamic University
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Events</title>
+</head>
+
+<body>
+    <button id="btn-mouse">The Micky Mouse is Here....</button>
+    <input type="text" id="user-name" placeholder="Enter Your name">
+    <input type="text" id="user-email" placeholder="Enter Your Email">
+    <script>
+        //document.getElementById('btn-mouse').addEventListener('mouseenter',function(){
+        //    console.log('Event Triggered..')
+        //})
+        //document.getElementById('btn-mouse').addEventListener('mousemove',function(){
+        //    console.log('Event Triggered..')
+        //})
+        //same things we find google
+        /*
+        document.getElementById('btn-mouse').addEventListener('mouseout',function(){
+        console.log('Event Triggered..')
+        })
+        */
+        document.getElementById('user-name').addEventListener('focus',function(){
+        console.log('User About to write Name');
+        })
+        document.getElementById('user-email').addEventListener('focus',function(){
+        console.log('User About to write Email');
+        })
+        document.getElementById('user-email').addEventListener('keyup',function(event){
+        console.log('User typing',event.target.value);
+        })
+
+    </script>
+</body>
+
+</html>

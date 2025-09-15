@@ -1,0 +1,44 @@
+<!--
+File: delete.html
+Created: Monday, 15th September 2025 11:12:26 pm
+Author: Md.Rahad (mdrahad1296@gmail.com)
+-----
+Last Modified: Monday, 15th September 2025 11:30:10 pm
+Modified By: Md.Rahad (mdrahad1296@gmail.com)
+-----
+Copyright (c) 2025 Islamic University
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete This</title>
+</head>
+
+<body>
+    <h1 id="text">My Secret Information need delete</h1>
+    <input type="text" id="delete-input" placeholder="Write delete">
+    <button id="btn-delete" disabled>delete</button>
+
+    <script>
+        document.getElementById('delete-input').addEventListener('keyup',function(){
+            const text=event.target.value;
+            const buttonDelete=document.getElementById('btn-delete');
+            //console.log('User is typing',text);
+            if(text==='delete'){
+                console.log('delete typed');
+                buttonDelete.removeAttribute('disabled');
+                const hidetext=document.getElementById('text');
+                hidetext.style.display='none';
+
+            }else{
+                //console.log('Please write correctly');
+                buttonDelete.setAttribute('disabled', true);
+            }
+        })
+    </script>
+</body>
+
+</html>
